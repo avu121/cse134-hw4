@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Experiments</title>
+    <link rel="icon" href="/images/ucsd-logo-png-transparent.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/side_nav.css">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">   
+    <style>
+        canvas {
+            transform: translate(10rem, 3rem) rotate(45deg);
+        }
+        input[type="submit"] {
+            font-size : 1rem;
+            transition : font-size 2s;
+        }
+        input[type="submit"]:hover {
+            font-size : 5rem;
+        }
+        input {
+            width : auto;
+            height : 1rem;
+        }
+        input:focus {
+            width : 3rem;
+            height : 2rem;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div><a href="/"><b>Home</b></a></div>
+        <h1>Experiments</h1>
+    </header>
+
+    <picture>
+        <source 
+            srcset="/images/button.webp"
+            type="image/webp">
+
+        <img src="/images/button.png" height="100" width="100" 
+        title="I don't do anything if you click me :(" 
+        alt="unclickable picture of a button">
+    </picture>
+
+    <audio controls src="/audio/boing_sounds-35923.mp3">
+        <a href="/audio/boing_sounds-35923.mp3">Download audio</a>
+    </audio>
+    
+    <button onclick="showText()" title="print a 'Hello' at the bottom of the page">Click Me</button>
+    <template id="hidden_text">Hello</template>
+    <script>
+        function showText() {
+            let text = document.getElementById("hidden_text");
+            let clone = text.content.cloneNode(true);
+            document.body.append(clone);
+        }
+    </script>
+
+<hr>
+
+<h3>Donate Here</h3>
+    <form method="get">
+        <label for="ccn">Enter your mom's credit card number:</label>
+        <input type="text" name="ccn" id="ccn" pattern="\d{16}" required>
+        <br>
+        <label for="back_digits">Enter the 3 digits on the back:</label>
+        <input type="text" name="back_digits" id="back_digits" pattern="\d{3}" required>
+        <br>
+        <input type="submit" value="Enter">
+    </form>
+
+<hr>
+
+
+<canvas title="an orange square..." id="my_canvas" width="200" height="200"></canvas>
+    <script>
+            const canvas = document.getElementById("my_canvas");
+            const ctx = canvas.getContext("2d");
+            ctx.fillStyle = "orange";
+            ctx.fillRect(0, 0, 200, 200);
+    </script>
+    
+    <p>This is a  
+        <svg width="20" height="20">
+            <rect x="0" y="0" width="20" height="20" stroke="red" fill="blue" stroke-width="10"/>
+        </svg>
+        square
+    </p>
+
+    <pre>
+        0         1
+        00        1
+        000       1
+        0000      1
+        00000     1
+        000000    1
+        0000000   1
+        00000000  1
+        000000000 1
+
+        triangles
+    </pre>
+
+<hr>
+
+<form method="get">
+    <fieldset>
+        <legend>Your Academic Background:</legend>
+        <label for="year">Year:</label>
+        <select name="year" id="year">
+            <optgroup label="undergraduate">
+                <option value="1st_year">1st year</option>
+                <option value="2nd_year">2nd year</option>
+                <option value="3rd_year">3rd year</option>
+                <option value="4th_year">4th year</option>
+            </optgroup>
+            <optgroup label="graduate">
+                <option value="masters">Master's</option>
+                <option value="phd">PHD</option>
+            </optgroup>
+            <optgroup label="neither">
+                <option value="jobless">jobless</option>
+                <option value="working">working</option>
+            </optgroup>
+        </select>
+        <br>
+        
+
+        <br>
+        <div>Future Plans:</div>
+        <textarea id="future_plans" name="future_plans" rows="4" cols="40"></textarea>
+        <br>
+
+        <label for="gpa">Your GPA:</label>
+        <input list="gpas" id="gpa" name="gpa">
+        <datalist id="gpas">
+            <option value="4.0+"></option>
+            <option value="4.0-3.75"></option>
+            <option value="3.74-3.5"></option>
+            <option value="3.49-3.25"></option>
+            <option value="3.24-3.0"></option>
+            <option value="under 3.0"></option>
+        </datalist>
+        <br>
+
+        <input type="submit">
+    </fieldset>
+</form>
+
+<footer>
+    <hr>
+    <h2>Other Pages</h2>
+    <ul>
+        <li><a href="/about.html">About Me</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/hobbies.html">Hobbies</a></li>
+        <li><a href="/external_links.html">External Links</a></li>
+    </ul>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+@import url(vars.css);
+
+.light-mode {
+    background-color : var(--light-bg-color);
+    color : var(--light-txt-color);
+}
+.dark-mode {
+    background-color: var(--dark-bg-color);
+    color : var(--dark-txt-color);
+}

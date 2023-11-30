@@ -1,0 +1,100 @@
+@import url(vars.css);
+
+
+@font-face {
+    font-family : "Titillium Web", sans-serif;
+    src : 
+        local("fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf")
+        url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap");
+}
+
+@font-face {
+    font-family : "Cousine", monospace;
+    src : 
+        local("fonts/Cousine/Cousine-Regular.ttf")
+        url("https://fonts.googleapis.com/css2?family=Cousine:ital@1&family=Titillium+Web:wght@300;600&display=swap");
+}
+
+@media (max-width : 480px) {
+    ul.navbar {
+        font-size : 4dvh;
+    }
+    p {
+        font-size : 4dvh;
+    }
+    h1 {
+        font-size : 4dvh;
+    }
+    #top {
+        font-size : 2dvh;
+    }
+}
+
+@keyframes experimental {
+    from {background-color : rgba(59, 47, 47, .8);}
+    to {background-color: #2CFA1F;}
+}
+a#experimental {
+    animation-name : experimental;
+    animation-duration : 4s;
+}
+
+@media (max-width : 768px) and (min-width : 481px) {
+    ul.navbar {
+        font-size : 2dvh;
+    }
+    p {
+        font-size : 2dvh;
+    }
+    h1 {
+        font-size : 2dvh;
+    }
+    #top {
+        font-size : 2dvh;
+    }
+}
+
+* {
+    margin : 0;
+    border : 0;
+    padding : 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color : var(--main-bg-color, rgb(72, 60, 50));
+    color : var(--main-text-color, white);
+    font-family : Arial, Helvetica, sans-serif;
+}
+
+a[href] {
+    color : var(--main-text-color, white);
+    font-family : "Cousine", monospace;
+}
+
+a:hover {
+    background-color : var(--hover-color, rgb(204, 84, 4));
+}
+
+h1, h2, h3{
+    font-family : "Titillium Web", sans-serif;
+}
+
+h1 {
+    padding-top : 1.5rem;
+    padding-bottom : 1rem;
+    font-size : 3rem;
+}
+
+p {
+    max-width : var(--max-p-length, 70ch);
+}
+
+a#top {
+    position : fixed;
+    bottom : 1rem;
+    left : 1rem;
+}

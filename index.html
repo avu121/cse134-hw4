@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Alan Vu's Portfolio</title>
+        <link rel="icon" href="/images/ucsd-logo-png-transparent.png">
+        <link rel="stylesheet" href="/css/main.css">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">   
+        <style>         
+            .wrapper {
+                display : grid;
+                grid-auto-columns: 1fr;
+                gap : 1rem;
+                grid-auto-rows: 1fr .75fr .75fr 1fr;
+                background-image : url("/images/home_background.jpg");
+                background-repeat: no-repeat;
+                background-size : cover;
+            }
+            .portrait {
+                max-width : 150px;
+                border : 1px solid color(srgb 1 0 0);
+            }
+            .landscape {
+                max-width : 800px;
+            }
+            ul.navbar {
+                list-style-type: none;
+                background-color : rgba(59, 47, 47, .8);
+                display : grid;
+                grid-template-columns: repeat(8, 1fr);
+            }
+            ul.navbar li {
+                display : inline;
+            }
+            li a {
+                display : block;
+                text-align : center;
+                text-decoration : none;
+                padding : 1rem .5rem;
+                height : 2rem;
+                font-weight: bold;
+            }
+            .wrapper > header {
+                background-color : rgba(75, 11, 11, .8);
+                grid-row: 1 / 2;
+                margin-left : .5rem;
+                margin-right : .5rem;
+            }
+            .wrapper > main {
+                background-color : rgba(75, 11, 11, .8);
+                grid-row : 2 / 3;
+                margin : .5rem;
+                line-height : 1.5;
+            }
+            .wrapper > footer {
+                background-color : rgba(75, 11, 11, .8);
+                grid-row : 3 / 4;
+                padding : 1rem;
+                margin : .5rem;
+            }
+            
+            img {
+                display : block;
+                margin : 1rem;
+                width : 50%;
+                height : auto;
+                margin-left : auto;
+                margin-right : auto;
+                object-position : 50% 50%;
+                object-fit : contain;
+            }
+            h1:has(+ picture) {
+                text-align: center;
+            }
+        </style> 
+    </head>
+    <body class="wrapper">
+        <header>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/" title="You're already here...">Home</a></li>
+                    <li><a href="/about.html">About Me</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="/hobbies.html">Hobbies</a></li>
+                    <li><a href="/external_links.html">External Links</a></li>
+                    <li><a href="/experiments.html" id="experimental">Experiments</a></li>
+                    <li><a href="/form-no-js.html">Form No JS</a></li>
+                    <li><a href="/form-with-js.html">Form With JS</a></li>
+                </ul>
+            </nav>
+            <h1>Alan Vu's Portfolio</h1>
+            <picture>
+                <source srcset="/images/mountains.webp" type="image/webp">
+                <img class="landscape" src="/images/mountains.jpg" height="300" alt="picture of San Jose from atop Mt. Hamilton">
+            </picture>
+        </header>
+        <main>  
+            <img class="portrait" src="/images/me.jpg" height="300" alt="picture of me, Alan Vu">
+            <p style="text-align : center; margin-left : auto; margin-right : auto;"> 
+                Welcome to my portfolio page! I am Alan Vu, a fourth year computer engineering student at UCSD.
+                Born and raised in San Jose! Feel free to look around!
+            </p>
+        </main>
+        <footer>
+            <h2>Contacts</h2>
+            <details>
+                <summary>Phone Number</summary>
+                <p><i>(669)233-6202</i></p>
+            </details>
+            <details style="margin-bottom : 2rem;">
+                <summary>Email</summary>
+                <p><i>a8vu@ucsd.edu</i></p>
+            </details>
+
+            <cite>Background image: <a href="https://www.freepik.com/free-ai-image/vibrant-autumn-landscape-multi-colored-leaves-nature-beauty-generative-ai_42212927.htm#query=prismatic%20forest&position=33&from_view=search&track=ais">Image By vecstock</a></cite>
+
+            <a id="top" href="#">Back to Top</a>
+        </footer>
+    </body>
+</html>
+

@@ -1,0 +1,11 @@
+:root {
+    --main-bg-color : rgb(72, 60, 50);
+    --main-text-color : white;
+    --max-p-length : 70ch;
+    --hover-color : rgb(204, 84, 4);
+
+    --light-bg-color : #FFEECC;
+    --light-txt-color : #F48037;
+    --dark-bg-color : #27374D;
+    --dark-txt-color : #DDE6ED;
+}

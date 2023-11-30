@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form No JS</title>
+    <meta charset="UTF-8">
+    <style>
+        .wrapper {
+            display : grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(10, .25fr);
+        }
+        label, input {
+            display : block;
+            grid-column: 1;
+        }
+        input {
+            margin-bottom : 1rem;
+        }
+        #comments {
+            height : 3rem;
+            width : 40ch;
+            word-wrap: break-word;
+        }
+        label, input[type="submit"] {
+            margin-top : 1rem;
+        }
+        .err {
+            grid-column: 1;
+        }
+        .info {
+            grid-column : 2;
+        }
+        input:user-invalid {
+            box-shadow: 0 0 5px 1px red;
+        }
+        #name:user-invalid + .err::before {
+            content : "Please enter a valid name";
+            background-color : rgba(255, 0, 0, .2);
+        }
+        #email:user-invalid + .err::before {
+            content : "Please enter a valid email";
+            background-color : rgba(255, 0, 0, .2);
+        }
+        #comments:user-invalid + .err::before {
+            content : "Please enter a comment";
+            background-color : rgba(255, 0, 0, .2);
+        }
+    </style>
+</head>
+<body class="wrapper">
+    <form action="https://httpbin.org/post" method="post" id="form1">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" minlength="2" required>
+        <output class="err" form="form1" for="name"></output>
+        <output class="info" form="form1" for="name"></output>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+        <output class="err" form="form1" for="email"></output>
+        <output class="info" form="form1" for="email"></output>
+
+        <label for="comments">Comments:</label>
+        <input type="text" id="comments" name="Comments" maxlength="120" pattern="[a-zA-Z0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\-]*" required>
+        <output class="err" form="form1" for="comments"></output>
+        <output class="info" form="form1" for="comments"></output>
+
+        <input type="hidden" name="possible_bot" value="true">
+        <input type="submit" id="submit" name="submit">
+    </form>
+
+    <a href="/index.html">HOME</a>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Me</title>
+    <link rel="icon" href="/images/ucsd-logo-png-transparent.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/side_nav.css">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">   
+    <style>
+        @media (max-width : 768px) and (min-width : 481px) {
+            figcaption {
+                font-size : 2dvh;
+            }
+            table {
+                font-size : 2dvh;
+            }
+            p {
+                font-size : 2dvh;
+            }
+            ul.navbar {
+                font-size : 2dvh;
+            }
+        }
+        @media (max-width : 480px) {
+            figcaption {
+                font-size : 4dvh;
+            }
+            table {
+                font-size : 4dvh;
+            }
+            p {
+                font-size : 4dvh;
+            }
+            ul.navbar {
+                font-size : 4dvh;
+            }
+        }
+        table, th, td {
+          border : 1px solid black;
+          background-color : white;
+          text-align : center;
+        }
+
+        th, td {
+            color : black;
+        }
+        .wrapper {
+            display : grid;
+            grid-template-columns : .05fr 1fr 1fr;
+            grid-template-rows : .25fr 1fr 1fr 1fr;
+            column-gap : 2rem;
+            row-gap : 2rem;
+        }
+        .wrapper > h1 {
+            grid-column : 1 / 4;
+            grid-row : 1 / 2;
+            padding-left : 2rem;
+            background-color : rgba(59, 47, 47, .8);
+        }
+        .wrapper > nav {
+            grid-column : 1 / 2;
+            grid-row : 2 / 3;
+        }
+        .wrapper #section1 {
+            grid-column : 2 / 3;
+            grid-row : 2 / 3;
+            padding-top : 2rem;
+            line-height : 1.5;
+        }
+        .wrapper #section2 {
+            grid-column : 2 / 3;
+            grid-row : 3 / 4;
+            line-height : 1.5;
+        }   
+        .wrapper > table {
+            grid-column : 2 / 3;
+            grid-row : 4 / 5;
+            margin-bottom : 2rem;
+        }
+        .wrapper #fig1 {
+            grid-column : 3 / 4;
+            grid-row : 2 / 3;
+        }
+        .wrapper #fig2 {
+            grid-column : 3 / 4;
+            grid-row : 3 / 4;
+        }
+        .wrapper > figure {
+            text-align : center;
+            font-size : .8rem;
+            padding-top : 2rem;
+            width : 50%;
+            height : auto;
+            margin-left : auto;
+            margin-right : auto;
+        }
+        h2 {
+            margin-bottom : 1rem;
+            font-size : 2rem;
+        }
+        img {
+            border : 2px solid color-mix(in srgb, #4B0B0B 90%, white);
+        }
+    </style>
+</head>
+
+<body class="wrapper">
+    <h1>About Me</h1>
+    <nav>
+        <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/hobbies.html">Hobbies</a></li>
+            <li><a href="/external_links.html">External Links</a></li>
+            <li><a href="/experiments.html" id="experimental">Experiments</a></li>
+        </ul>  
+    </nav>
+    <section id="section1">
+        <h2>Some Things About Me</h2>
+        <p id="par">
+            Hello! My name is Alan Vu and I was born and live in San Jose, 
+            California. I currently live in San Diego for my university education
+            at UCSD. I am fluent in English and can speak some Vietnamese, 
+            Japanese, and Spanish. My favorite types of food are Thai and Japanese. 
+            In my free time I like to play videogames, watch Youtube videos, and 
+            read comics. I also enjoy playing tennis, bouldering, and running.
+        </p>
+    </section>
+    <section id="section2">
+        <h2>Academic Background</h2>
+        <p>
+            As of October 2023, I am a 4th year Computer Engineering Major studying at 
+            UCSD with a GPA of 3.75. My focus is on software and I am comfortable with 
+            <code>Java, C++, Python, SystemVerilog, and SQL</code>. I am currently studying to become
+            proficient at <code>HTML, CSS, and JavaScript</code>. My future plans are to either land a 
+            job or continue on to graduate school. 
+        </p>
+    </section>
+    <table id="tb">
+        <caption style="font-weight : bold; font-size : 1.2rem;">A few of my favorite things</caption>
+        <colgroup>
+            <col class="Movies_Shows">
+            <col class="Foods">
+            <col class="Music">
+        </colgroup>
+        <tr>
+            <th scope="col">Movies/Shows</th>
+            <th scope="col">Foods</th>
+            <th scope="col">Music Genres</th>
+        </tr>
+        <tr>
+            <td>The Lord of the Rings Trilogy</td>
+            <td>Thai Curry</td>
+            <td>Korean Ballad</td>
+        </tr>
+        <tr>
+            <td>Breaking Bad</td>
+            <td>Lime Cheesecake</td>
+            <td>Rock</td>
+        </tr>
+        <tr>
+            <td>Interstellar</td>
+            <td>Ramen</td>
+            <td>Video Game OST</td>
+        </tr>
+    </table>
+
+    <figure id="fig1">
+        <picture>
+            <source srcset="/images/Ramen.webp" type="image/webp">
+            <img src="/images/Ramen.jpg" width="200" alt="picture of ramen">
+        </picture>
+        
+        <figcaption>Ramen I had over the summer of 2023</figcaption>
+    </figure>
+    <figure id="fig2">
+        <picture>
+            <source srcset="/images/Fried_rice.webp" type="image/webp">
+            <img src="/images/Fried_Rice.jpg" width="200" alt="picture of fried rice">
+        </picture>
+        <figcaption>Fried rice I had recently</figcaption> 
+    </figure>
+    <footer>
+        <a id="top" href="#">Back to Top</a>
+    </footer>
+</body>
+</html>

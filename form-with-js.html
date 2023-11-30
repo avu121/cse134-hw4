@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form With JS</title>
+    <link rel="stylesheet" href="css/darkmode_Toggle.css">
+    <meta charset="UTF-8">
+    <style>
+        .wrapper {
+            display : grid;
+            grid-auto-columns: 1fr 1fr;
+            grid-auto-rows: .25fr, 1fr;
+            transition : background-color 0.4s, color 0.4s;
+        }
+        label, input {
+            display : block;
+            grid-column : 1;
+            grid-row : 3;
+        }
+        input {
+            margin-bottom : 1rem;
+        }
+        #comments {
+            height : 3rem;
+            width : 40ch;
+            word-wrap: break-word;
+        }
+        label, input[type="submit"] {
+            margin-top : 1rem;
+        }
+        .err {
+            grid-column: 1;
+        }
+        .info {
+            grid-column : 2;
+        }
+        input:user-invalid {
+            box-shadow: 0 0 5px 1px red;
+        }
+        #name:user-invalid + .err::before {
+            content : "Please enter a valid name";
+            background-color : rgba(255, 0, 0, .2);
+        }
+        #email:user-invalid + .err::before {
+            content : "Please enter a valid email";
+            background-color : rgba(255, 0, 0, .2);
+        }
+        #comments:user-invalid + .err::before {
+            content : "Please enter a comment";
+            background-color : rgba(255, 0, 0, .2);
+        }
+
+        /*Toggle Switch*/
+        .darkmode_toggle {
+            grid-column : 1;
+            grid-row : 1;
+            position : relative;
+            display : inline-block;
+            width : 60px;
+            height : 34px;
+        }
+        input[type="checkbox"] {
+            visibility : hidden;
+        }
+        .toggle_slider {
+            position : absolute;
+            cursor : pointer;
+            top : 0;
+            left : 0;
+            right : 0;
+            bottom : 0;
+            background-color : #ccc;
+            transition : 0.4s;
+            border-radius : 34px;
+        }
+        .toggle_slider:before {
+            position : absolute;
+            content : "";
+            height : 26px;
+            width : 26px;
+            left : 4px;
+            bottom : 4px;
+            background-color : white;
+            transition : 0.4s;
+            border-radius : 50%;
+        }
+        input:checked + .toggle_slider {
+            background-color : #2196F3;
+        }
+      
+          input:checked + .toggle_slider:before {
+            transform : translateX(26px);
+        }
+
+    </style>
+    <script src="scripts/main.js"></script>
+</head>
+<body class="wrapper">
+
+    <label class="darkmode_toggle">
+        <input type="checkbox">
+        <span class="toggle_slider"></span>
+    </label>
+    
+    <noscript>
+        <style>
+            .darkmode_toggle {
+                display : none;
+            }
+        </style>
+    </noscript>
+
+    <form action="https://httpbin.org/post" method="post" id="form1">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" pattern="[a-zA-Z0-9]{2,64}" required>
+        <output class="err" form="form1" for="name"></output>
+        <output class="info" form="form1" for="name"></output>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+        <output class="err" form="form1" for="email"></output>
+        <output class="info" form="form1" for="email"></output>
+
+        <label for="comments">Comments:</label>
+        <input type="text" id="comments" name="Comments" maxlength="120" pattern="[a-zA-Z0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\-]*" required>
+        <output class="err" form="form1" for="comments"></output>
+        <output class="info" form="form1" for="comments"></output>
+
+        <input type="hidden" name="possible_bot" value="true">
+        <input type="submit" id="submit" name="submit">
+    </form>
+
+    <a href="/index.html">HOME</a>
+</body>
+</html>

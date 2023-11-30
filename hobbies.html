@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hobbies</title>
+    <link rel="icon" href="/images/ucsd-logo-png-transparent.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/side_nav.css">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">   
+    <style>
+        picture, img {
+            grid-column: 3;
+            height : auto;
+            object-position : 50% 50%;
+            object-fit : contain;
+        }
+        p {
+            line-height: 1.5;
+        }
+        h2 {
+            font-size : 1.5rem;
+        }
+        .wrapper {
+            display : grid;
+            grid-template-columns : .05fr 1fr .5fr;
+            grid-template-rows : .25fr repeat(3, .5fr);
+            column-gap : 2rem;
+            row-gap : 2rem;
+        }
+        .wrapper h1 {
+            grid-column : 1 / 4;
+            grid-row : 1;
+            background-color : rgba(59, 47, 47, .8);
+        }
+        .wrapper nav {
+            grid-column : 1;
+            grid-row : 2;
+        }
+        .wrapper section {
+            grid-column : 2;
+        }
+        .wrapper #section1 {
+            grid-row : 2;
+        }
+        .wrapper #section2 {
+            grid-row : 3;
+        }
+        .wrapper #section3 {
+            grid-row : 4;
+            margin-bottom : 2rem;
+        }
+        cite {
+            display : block;
+        }
+    </style>
+</head>
+<body class="wrapper">
+    <h1>Hobbies</h1>
+    <nav>
+        <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Me</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/external_links.html">External Links</a></li>
+            <li><a href="/experiments.html" id="experimental">Experiments</a></li>
+        </ul>
+    </nav>
+
+    <section id="section1">
+        <h2>Tennis</h2>
+        <p> 
+            I have inconsistently played tennis for 3 years in high school 
+            in junior varsity. I would rate myself as being average at best
+            because I can somewhat execute forehand swings and my footwork is alright.
+        </p>
+    </section>
+    <picture>
+        <source srcset="/images/tennis_court.webp" type="image/webp">
+        <img src="/images/tennis_court.jpg" width="200" alt="picture of tennis courts">
+    </picture>
+    <section id="section2">
+        <h2>Video Games</h2>
+        <p>
+            Video games have always been something I've enjoyed for as long as I've known. 
+            I've played games on the PS3, Xbox, and Game Cube to name a few. My favorite type
+            of game is single player games. Some of my favorites are Jet Set Radio Future and LoZ: The Wind Waker.
+            A few of my favorite multiplayer games are Apex Legends and Realm of the Mad God.
+        </p>
+    </section>
+    <picture>
+        <source srcset="/images/JSRF.webp" type="image/webp">
+        <img src="/images/JSRF.jpg" width="200" alt="picture of Jet Set Radio Future box art">
+    </picture>
+    <section id="section3">
+        <h2>Bouldering</h2>
+        <p>
+            I've only gone bouldering a few times, but each time I went, I had a lot of fun. I would go 
+            bouldering more often if I didn't have to ask someone for a ride each time I go. Additionally,
+            gym memberships are quite expensive.
+        </p>
+    </section>
+    <img src="/images/bouldering_wall.png" width="200"  alt="picture of a bouldering wall">
+
+    <footer>
+        <p>Image Sources:</p>
+        <cite><a href="https://www.waltspaving.com/wp-content/uploads/2021/07/tim-chow-iiWhddT4SB4-unsplash-scaled.jpg">Tennis Court</a></cite>
+        <cite><a href="https://static.wikia.nocookie.net/jetsetradio/images/0/05/JSRF_Jet_Set_Radio_Future_2002_Game_Cover.png/revision/latest?cb=20210427143415">JSRF</a></cite>
+        <cite><a href="https://wellness.studentaffairs.miami.edu/outdoor-adventures/images/lakeside-village-outdoor-adventures_61-480-x-320.png">Bouldering Wall</a></cite>
+        <a id="top" href="#">Back to Top</a>
+    </footer>
+</body>
+
+</html>

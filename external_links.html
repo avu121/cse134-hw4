@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>External Links</title>
+    <link rel="icon" href="/images/ucsd-logo-png-transparent.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/side_nav.css">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">   
+    <style>
+        .wrapper {
+            display : grid;
+            grid-template-columns : .05fr 1fr;
+            grid-template-rows : .25fr .5fr .5fr;
+            column-gap: 2rem;
+            row-gap: 2rem;
+        }
+        .wrapper nav {
+            grid-column : 1;
+            grid-row : 2;
+        }
+        .wrapper h1 {
+            grid-column : 1 / 3;
+            grid-row : 1;
+            background-color : rgba(59, 47, 47, .8);
+        }
+        #ext_nav {
+            grid-column : 2;
+            grid-row : 2;
+            font-size : 1.5rem;
+        }
+        .wrapper section {
+            grid-column: 2;
+            grid-row: 3;
+            font-size : 1.2rem;
+        }
+    </style>
+</head>
+<body class="wrapper">
+    <h1>External Links</h1>
+    <nav>
+        <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Me</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/hobbies.html">Hobbies</a></li>
+            <li><a href="/experiments.html" id="experimental">Experiments</a></li>
+        </ul>  
+    </nav>
+    <nav id="ext_nav">
+        <a href="https://github.com/avu121">GitHub</a> |
+        <a href="https://a8vu05.wixsite.com/avuportfolio">Block Programming Explanations</a>
+    </nav>
+    <section>
+        <h2 style="margin-bottom : 1rem; font-size:1.2rem;">Here is one of my Video Explanations:</h2>
+        <video controls width="300">
+            <source src="/videos/WP_Sequencing.mp4" type="video/mp4">
+        </video>
+    </section>
+    <footer>
+        <a id="top" href="#">Back to Top</a>
+    </footer>
+</body>
+</html>
